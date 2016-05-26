@@ -7,6 +7,7 @@ module.exports = function getCORSRequest() {
     } else if (!!global.XDomainRequest) {
         return new XDomainRequest();
     } else {
-        throw new Error('CORS is not supported by your browser');
+        return xhr;
+        // throw new Error('CORS is not supported by your browser');
     }
 };
